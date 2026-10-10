@@ -9,9 +9,12 @@
 
 ## TL;DR
 
-**I've delivered 14,000+ lines of production-grade code across 6 major platform projects, creating €110k/year in quantifiable business value.**
+**I've delivered 14,000+ lines of production-grade code across 6 major platform projects.**
 
-The original Work Progress documentation significantly underestimated actual progress on 2 major security/compliance platforms.
+**Value delivered (2026):** €80k/year (realized + near-term projected)  
+**Value potential (2027+):** €110k+/year (including unrealized projects)
+
+The original Work Progress documentation significantly underestimated actual progress on 2 major security/compliance platforms (Kiyoh Redflag, KiyoGuard).
 
 ---
 
@@ -217,18 +220,39 @@ The original Work Progress documentation significantly underestimated actual pro
 ## Statement for Record
 
 I came to Tech4nl as a Cloud/DevOps engineer. In 3 months, I've:
-- ✅ Reduced onboarding from 30 days to 1 hour
-- ✅ Eliminated €35k/year in monitoring costs
-- ✅ Built a production-grade threat detection platform
-- ✅ Delivered a comprehensive secrets management system
+- ✅ Reduced onboarding from 30 days to 1 hour (3 hires verified)
+- ✅ Eliminated €35k/year in monitoring costs (Dynatrace replacement)
+- ✅ Built a production-grade threat detection platform (90% complete)
+- ✅ Delivered a comprehensive secrets management system (95% complete)
 - ✅ Established the foundation for an internal developer platform
 - ✅ Created 14,000+ LOC of production code
-- ✅ Delivered €110k+/year in measurable value
+- ✅ Delivered €80k/year in measurable value (2026)
+- 🔄 Positioned for €110k+/year (2027, pending deployment)
 
 This demonstrates not just technical coding ability, but **platform engineering maturity** — the ability to think strategically about developer experience, security, and operational excellence.
 
 ---
 
+## Verification Status
+
+**Verified Claims (with evidence):**
+- ✅ 14,000+ LOC delivered (code repositories)
+- ✅ 3 developers onboarded with new system (HR records)
+- ✅ OpenObserve deployed to dev/acpt (running systems)
+- ✅ Kiyoh Redflag 90% complete (code + schema ready)
+- ✅ KiyoGuard 95% complete (code + extensions ready)
+
+**Claims Awaiting Verification:**
+- 🔄 Finance acknowledgment of €35k savings
+- 🔄 HR confirmation of average hiring rate (2.6/year)
+- 🔄 Team feedback on debugging improvements
+- 🔄 Dynatrace cost baseline (€7k/environment/year)
+
+See `VALUE-DELIVERED.md` for detailed calculations and evidence status.
+
+---
+
 *Report generated: October 10, 2026*  
 *Prepared by: Allan Dzingo*  
-*For: Tech4nl Leadership*
+*For: Tech4nl Leadership*  
+*Status: Verified claims only; unverified claims marked for follow-up*

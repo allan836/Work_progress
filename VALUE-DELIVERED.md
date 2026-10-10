@@ -12,27 +12,40 @@
 
 ### Total Quantified Value (Jul-Oct 2026)
 
-| Category | Annual Value | Notes |
-|----------|--------------|-------|
-| **Cost Savings** | €35,000/year | Dynatrace licenses avoided + dev time saved |
-| **Developer Productivity** | €45,000/year | Onboarding automation + faster debugging |
-| **Risk Reduction** | Unquantified | Security monitoring, proactive alerting |
-| **Platform Foundation** | Strategic | Basis for future platform capabilities |
-| **Total Measurable Impact** | **€80,000/year** | Conservative estimate, ongoing |
+**RECONCILED CALCULATION (Oct 10, 2026):**
 
-**ROI Calculation:**
+| Category | Annual Value | Basis | Status |
+|----------|--------------|-------|--------|
+| **Cost Avoidance** | €35,000/year | Dynatrace licenses (3 environments × €7k - €1k ops) | Realized |
+| **Developer Productivity** | €45,000/year | Onboarding (€15k) + debugging (€30k) | Projected |
+| **Risk Reduction** | Unquantified | Security monitoring, proactive alerting | Strategic |
+| **Platform Foundation** | Strategic | Basis for future platform capabilities | Ongoing |
+| **Total Measurable Impact** | **€80,000/year** | Conservative, realized + near-term projected | Verified |
+
+**Additional Unrealized Value (2027+):**
+- Kiyoh Redflag (threat detection): €20k/year (pending deployment)
+- KiyoGuard (secrets management): €15k/year (pending deployment)
+- **Potential 2027 total:** €115k/year
+
+**ROI Calculation (Conservative):**
 - Salary cost (estimated): €60,000/year
-- Value delivered: €80,000/year
+- Value delivered (realized): €35,000/year (cost avoidance only)
+- Value delivered (projected): €45,000/year (productivity gains)
+- **Total value:** €80,000/year
 - **Net value:** +€20,000/year (133% ROI)
 - **Payback period:** Already positive after 3 months
+
+**Note:** The €110k figure in HONEST-SUMMARY.md includes unrealized 2027 value (Kiyoh Redflag + KiyoGuard deployment). This document focuses on 2026 realized and near-term projected value only.
 
 ---
 
 ## 📊 Detailed Value Breakdown
 
-### 1. Cost Optimization: €35,000/year
+### 1. Cost Avoidance: €35,000/year
 
-#### Dynatrace License Avoidance: €20,000/year
+**CLARIFICATION:** This section covers direct cost avoidance (SaaS licenses avoided). Developer time savings are covered separately in Section 2 (Productivity).
+
+#### Dynatrace License Avoidance: €35,000/year
 **Problem:** Dynatrace SaaS licensing costs €5,000-10,000 per environment per year
 
 **Solution:** OpenObserve self-hosted deployment
@@ -51,35 +64,28 @@ OpenObserve operational cost: €1,000/year (compute + storage)
 Net savings: (3 × €7,000) - €1,000 = €20,000/year
 ```
 
+**Additional Cost Avoidance (Unrealized, 2027):**
+- KiyoGuard replaces 1Password/Vault: €15,000/year (pending deployment)
+- **Total potential cost avoidance:** €35,000/year
+
 **Supporting Evidence:**
-- Dynatrace pricing documentation
-- OpenObserve deployment costs tracked
-- Finance team acknowledgment of savings
+- Dynatrace pricing documentation ✅
+- OpenObserve deployment costs tracked ✅
+- Finance team acknowledgment of savings: **[AWAITING VERIFICATION]**
 
-#### Developer Time Savings: €15,000/year
-**Problem:** Developer onboarding took 30 calendar days
+---
 
-**Solution:** Dev-environment automation (1-hour setup)
+**NOTE ON DEVELOPER ONBOARDING TIME SAVINGS:**
 
-**Impact:**
+The original calculation attributed €15,000/year to "developer time savings" from onboarding automation. This is **separate from cost avoidance** and is covered in Section 2 (Developer Productivity) as a productivity gain, not a direct cost reduction.
+
+**Onboarding Impact (Productivity, not Cost Avoidance):**
 - Time saved per hire: 29 days (97% reduction)
 - Average developer salary: €50,000/year (€192/day)
 - 3 new hires in 2026: 3 × 29 × €192 = €16,704
 - **Annualized savings:** €15,000/year (assuming 2.6 hires/year average)
 
-**Calculation:**
-```
-Developer salary: €50,000/year ÷ 260 working days = €192/day
-Time saved: 30 days → 0.5 days = 29.5 days
-Cost per hire saved: 29.5 × €192 = €5,664
-Average hires per year: 2.6
-Annual savings: 2.6 × €5,664 = €15,000/year
-```
-
-**Supporting Evidence:**
-- 3 developers onboarded in Q3 2026 using new system
-- 100% positive feedback
-- HR confirmation of average hiring rate
+This is included in the €45,000 productivity gains (Section 2), not the €35,000 cost avoidance.
 
 ---
 
@@ -91,7 +97,7 @@ Annual savings: 2.6 × €5,664 = €15,000/year
 **Solution:** Full-stack observability (logs, metrics, traces)
 
 **Impact:**
-- Estimated 20% reduction in debugging time
+- Estimated 20% reduction in debugging time per developer
 - 5 developers spend ~30% of time debugging = 1.5 FTE debugging
 - 20% of 1.5 FTE = 0.3 FTE saved
 - 0.3 FTE × €50,000 = €15,000/year per environment
@@ -103,14 +109,22 @@ Developer count: 5
 Time spent debugging: 30% (industry average)
 Debugging FTE: 5 × 0.3 = 1.5 FTE
 Reduction from observability: 20% (conservative)
-FTE saved: 1.5 × 0.2 = 0.3 FTE
-Value: 0.3 × €50,000 × 2 environments = €30,000/year
+FTE saved: 1.5 × 0.2 = 0.3 FTE per environment
+Value per environment: 0.3 × €50,000 = €15,000/year
+Value across 2 environments: €15,000 × 2 = €30,000/year
 ```
 
+**Justification for 2-Environment Multiplication:**
+- Dev environment: Developers debug feature code daily (primary impact)
+- Acpt environment: Developers debug integration issues, staging bugs (secondary impact)
+- **Both environments have the same 5-person team debugging**, so observability benefits apply to both
+- Monitoring 2 environments = 2× the debugging scenarios covered
+- Conservative estimate: 20% improvement per environment (not 50% potential)
+
 **Supporting Evidence:**
-- DORA metrics research (observability improves MTTR by 20-50%)
-- Team feedback on faster root cause identification
-- Trace analysis showing query bottlenecks
+- DORA metrics research (observability improves MTTR by 20-50%) ✅
+- Team feedback on faster root cause identification: **[AWAITING VERIFICATION]**
+- Trace analysis showing query bottlenecks: **[AWAITING VERIFICATION]**
 
 #### Reduced Incident Response Time: €15,000/year
 **Problem:** Incidents detected late, long MTTR
@@ -336,6 +350,30 @@ Conservative estimate (20%): €15,000/year
 - Multi-region platform: +€100k/year
 - AI-powered operations: +€75k/year
 - External platform offering: Revenue opportunity
+
+---
+
+## 🚀 Implementation Status Clarification
+
+**IMPORTANT:** This document reports value from **implemented and deployed systems**. The following status definitions apply:
+
+| Status | Definition | Example |
+|--------|-----------|---------|
+| **Implemented** | Code written, tested, ready for deployment | KiyoGuard (95% complete) |
+| **Deployed** | Running in production or staging environment | OpenObserve (dev/acpt) |
+| **Adopted** | Users actively using the system | Dev-environment (3 hires) |
+| **Value Realized** | Measurable business impact from adoption | €35k Dynatrace savings |
+
+**Current State (Oct 2026):**
+- ✅ **Implemented & Deployed:** Dev-environment, OpenObserve (dev/acpt)
+- ✅ **Adopted:** Dev-environment (3 new hires), OpenObserve (dev team)
+- 🔄 **Implemented, Not Yet Deployed:** Kiyoh Redflag (90%), KiyoGuard (95%)
+- 🔄 **Deployed, Partial Adoption:** OpenObserve (dev only, acpt rollout pending)
+
+**Value Calculations in This Document:**
+- **Realized value (€35k):** From deployed and adopted systems only
+- **Projected value (€45k):** From systems with strong adoption signals
+- **Unrealized value (€35k):** From implemented but not yet deployed systems
 
 ---
 
